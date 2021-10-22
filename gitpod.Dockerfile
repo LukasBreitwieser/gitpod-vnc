@@ -19,6 +19,7 @@ RUN git clone https://github.com/BioDynaMo/biodynamo.git    \
     && mkdir build                                          \
     && cd build                                             \
     && cmake -Dnotebooks=on ..                              \
-    && make -j16                                            \
-    && echo "c.NotebookApp.allow_origin = '*'" >> /workspace/biodynamo/build/third_party/root/etc/notebook/jupyter_notebook_config.py
+    && make -j16
+
+RUN echo "c.NotebookApp.allow_origin = '*'" >> ~/biodynamo/build/third_party/root/etc/notebook/jupyter_notebook_config.py
 
