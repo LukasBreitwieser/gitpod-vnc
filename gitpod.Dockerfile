@@ -7,16 +7,10 @@ RUN apt-get update                                             \
 
 USER gitpod
 
-RUN ls -al 
-RUN stat /workspace
-RUN sudo chown /workspace
-RUN stat /workspace
-
 RUN PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.9.1 \
     && pyenv global 3.9.1
 
-RUN cd /workspace \
-    && git clone https://github.com/BioDynaMo/biodynamo.git \
+RUN git clone https://github.com/BioDynaMo/biodynamo.git    \
     && cd biodynamo                                         \
     && ./prerequisites.sh all                               \
     && ln -s /workspace/.pip-modules/share/jupyter /home/gitpod/.pyenv/versions/3.9.1/share/jupyter \
