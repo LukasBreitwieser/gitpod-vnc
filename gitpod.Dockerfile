@@ -1,6 +1,6 @@
 FROM gitpod/workspace-full-vnc
 
-USER ROOT
+USER root
 
 RUN apt-get update                                             \
     && apt install -y libxkbcommon-x11-0
