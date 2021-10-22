@@ -7,6 +7,11 @@ RUN apt-get update                                             \
 
 USER gitpod
 
+RUN ls -al 
+RUN stat /workspace
+RUN sudo chown /workspace
+RUN stat /workspace
+
 RUN PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.9.1 \
     && pyenv global 3.9.1
 
