@@ -1,2 +1,11 @@
 image:
   file: gitpod.Dockerfile
+
+ports:
+  # jupyter notebooks
+  - port: 8888
+    onOpen: open-browser
+  # VNC
+  - port: 6080
+    onOpen: open-browser
+
