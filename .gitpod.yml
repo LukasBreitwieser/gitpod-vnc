@@ -20,3 +20,7 @@ tasks:
     command: /workspace/gitpod-vnc/init.sh
 
 workspaceLocation: "/workspace"
+
+vscode:
+  extensions:
+    - twxs.cmake
