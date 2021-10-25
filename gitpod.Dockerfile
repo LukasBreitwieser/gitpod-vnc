@@ -14,8 +14,6 @@ RUN git clone https://github.com/BioDynaMo/biodynamo.git    \
     && cd biodynamo                                         \
     && export SILENT_INSTALL=1                              \
     && ./prerequisites.sh all                               \
-    && ln -s /workspace/.pip-modules/share/jupyter /home/gitpod/.pyenv/versions/3.9.1/share/jupyter \
-    && ln -s /workspace/.pip-modules/etc ~/.pyenv/versions/3.9.1/etc \
     && mkdir build                                          \
     && cd build                                             \
     && cmake -Dnotebooks=on ..                              \
