@@ -6,6 +6,9 @@ USER root
 RUN apt-get update                                             \
     && apt install -y libxkbcommon-x11-0
 
+# required by optim
+RUN apt-get -y install libgsl-dev libarmadillo-dev
+
 # Add script to open vnc window in seperate window
 COPY open-vnc-window.sh /usr/bin/open-vnc-window
 RUN chmod +x /usr/bin/open-vnc-window
