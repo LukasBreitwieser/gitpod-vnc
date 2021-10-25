@@ -23,3 +23,5 @@ RUN git clone https://github.com/BioDynaMo/biodynamo.git    \
 
 RUN echo "c.NotebookApp.allow_origin = '*'" >> ~/biodynamo/build/third_party/root/etc/notebook/jupyter_notebook_config.py
 
+RUN echo 'source $HOME/biodynamo/build/bin/thisbdm.sh' >> $HOME/.bashrc
+

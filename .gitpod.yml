@@ -4,8 +4,13 @@ image:
 ports:
   # jupyter notebooks
   - port: 8888
-    onOpen: open-browser
+    onOpen: ignore
   # VNC
   - port: 6080
-    onOpen: open-browser
+    onOpen: ignore
 
+tasks:
+  - name: Startup
+    command: ./startup.sh
+
+workspaceLocation: "/workspace"
