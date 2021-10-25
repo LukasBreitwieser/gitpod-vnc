@@ -7,14 +7,14 @@ RUN apt-get update                                             \
     && apt install -y libxkbcommon-x11-0
 
 # Add script to open vnc window in seperate window
-RUN cp open-vnc-window.sh /usr/bin/open-vnc-window
+COPY open-vnc-window.sh /usr/bin/open-vnc-window
 RUN chmod +x /usr/bin/open-vnc-window
 
 # Add script to open vnc window in seperate window
-RUN cp open-notebook-window.sh /usr/bin/open-notebook-window
+COPY open-notebook-window.sh /usr/bin/open-notebook-window
 RUN chmod +x /usr/bin/open-notebook-window
 
-RUN cp notebook-url.sh /usr/bin/notebook-url
+COPY notebook-url.sh /usr/bin/notebook-url
 RUN chmod +x /usr/bin/notebook-url
 
 USER gitpod
@@ -32,7 +32,7 @@ RUN git clone https://github.com/BioDynaMo/biodynamo.git    \
     && make -j16
 
 # Patch paraview shell function to open VNC window before
-RUN cp paraview.sh /home/gitpod/biodynamo/bin/sh_functions/paraview
+COPY paraview.sh /home/gitpod/biodynamo/bin/sh_functions/paraview
 
 # Patch jupyter notebook configuration
 RUN echo "c.NotebookApp.allow_origin = '*'" >> ~/biodynamo/build/third_party/root/etc/notebook/jupyter_notebook_config.py
