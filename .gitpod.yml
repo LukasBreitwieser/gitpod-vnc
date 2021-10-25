@@ -11,6 +11,6 @@ ports:
 
 tasks:
   - name: Startup
-    command: ./startup.sh
+    command: /workspace/gitpod-vnc/startup.sh
 
 workspaceLocation: "/workspace"
