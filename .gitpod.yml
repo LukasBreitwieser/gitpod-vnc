@@ -8,9 +8,13 @@ ports:
   # VNC
   - port: 6080
     onOpen: ignore
+  - port: 1024
+    onOpen: ignore
 
 tasks:
-  - name: Startup
-    command: /workspace/gitpod-vnc/startup.sh
+  - name: Initialization
+    command: /workspace/gitpod-vnc/jupyter.sh
+  - name: Terminal
+    command: /workspace/gitpod-vnc/init.sh
 
 workspaceLocation: "/workspace"
