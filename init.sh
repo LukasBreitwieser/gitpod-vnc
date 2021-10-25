@@ -19,4 +19,4 @@ echo ""
 echo "We created the demo $BDM_TRY_DEMO and changed into this directory."
 echo "Compile and run the simulation by calling:"
 echo "bdm run"
-
+gp open .
