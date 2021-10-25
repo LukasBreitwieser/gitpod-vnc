@@ -8,7 +8,7 @@ rm ST*.html
 
 # start Jupyter notebooks server
 export BDMGP_JUPYTER_TOKEN=$(echo $RANDOM | sha256sum | cut -c -64)
-gp env BDMGP_JUPYTER_TOKEN=$BDMGP_JUPYTER_TOKEN
+echo $BDMGP_JUPYTER_TOKEN > /workspace/.jupyter-token
 jupyter-notebook \
   --NotebookApp.token=$BDMGP_JUPYTER_TOKEN \
   --no-browser
