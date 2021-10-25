@@ -32,7 +32,7 @@ RUN git clone https://github.com/BioDynaMo/biodynamo.git    \
     && make -j16
 
 # Patch paraview shell function to open VNC window before
-COPY paraview.sh /home/gitpod/biodynamo/bin/sh_functions/paraview
+COPY paraview.sh /home/gitpod/biodynamo/build/bin/sh_functions/paraview
 
 # Patch jupyter notebook configuration
 RUN echo "c.NotebookApp.allow_origin = '*'" >> ~/biodynamo/build/third_party/root/etc/notebook/jupyter_notebook_config.py

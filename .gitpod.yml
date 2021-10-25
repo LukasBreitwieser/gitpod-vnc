@@ -10,6 +10,8 @@ ports:
     onOpen: ignore
   - port: 1024
     onOpen: ignore
+  - port: 5900
+    onOpen: ignore
 
 tasks:
   - name: Initialization

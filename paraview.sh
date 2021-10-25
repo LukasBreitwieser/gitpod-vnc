@@ -2,5 +2,5 @@
 
 paraview() {
   open-vnc-window
-  "\${ParaView_DIR}/bin/paraview" "\$@"
+  "${ParaView_DIR}/bin/paraview" "$@"
 }
