@@ -8,6 +8,9 @@ echo -e '\0033\0143'
 echo "Welcome to BioDynaMo on gitpod!"
 echo ""
 
+# wait until jupyter is ready
+gp await-port 8888 &>/dev/null
+
 if [ ! -z $BDM_TRY_NOTEBOOK ]; then
   # Jupyter notebooks
   echo "To open the notebook ($BDM_TRY_NOTEBOOK), click on the following link:"
@@ -26,7 +29,8 @@ else
   echo "To open the list of available notebooks, click on the following link:"
   echo "  $(notebook-url)"
   echo ""
-  echo "Create a new simulation with: bdm new my-sim"
+  echo "To create a new simulation execute the following command:"
+  echo "  bdm new my-sim"
 fi
 
 echo ""
