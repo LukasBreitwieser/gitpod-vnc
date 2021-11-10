@@ -15,6 +15,8 @@ if [ ! -z $BDM_TRY_NOTEBOOK ]; then
   # Jupyter notebooks
   echo "To open the notebook ($BDM_TRY_NOTEBOOK), click on the following link:"
   echo "  $(notebook-url $BDM_TRY_NOTEBOOK)"
+  # This might be blocked by the browser's pop-up blocker
+  open-notebook-window $BDM_TRY_NOTEBOOK
 elif [ ! -z $BDM_TRY_DEMO ]; then
   # Demo
   bdm demo $BDM_TRY_DEMO
