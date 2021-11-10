@@ -25,13 +25,15 @@ USER gitpod
 RUN PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.9.1 \
     && pyenv global 3.9.1
 
+# Turn of NUMA, to avoid "mbind: Operation not permitted", 
+# errors caused by docker security constraints
 RUN git clone https://github.com/BioDynaMo/biodynamo.git    \
     && cd biodynamo                                         \
     && export SILENT_INSTALL=1                              \
     && ./prerequisites.sh all                               \
     && mkdir build                                          \
     && cd build                                             \
-    && cmake -Dnotebooks=on ..                              \
+    && cmake -Dnotebooks=on -Dnuma=off ..                   \
     && make -j16
 
 # Patch paraview shell function to open VNC window before
