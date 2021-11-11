@@ -48,5 +48,3 @@ RUN echo 'source $HOME/biodynamo/build/bin/thisbdm.sh &>/dev/null' >> $HOME/.bas
 # Set default branch name
 RUN git config --global init.defaultBranch master
 
-# unset git credential helper
-RUN git config --global --unset credential.helper
