@@ -6,21 +6,7 @@ Therefore, you can immediately start experimenting with notebooks, demos, or you
 
 &nbsp;
 
-## You selected to run the `ST02_user-defined-random-number-distribution.ipynb` notebook  
-
-**[Click here]()** if the browser blocked the opening of the new window.
-
-To adjust the browser settings for the best experience **[follow this guide](https://www.gitpod.io/docs/configure/browser-settings)**.
-
-&nbsp;
-
-## You selected to run the `pyramidal_cell` demo
-
-The demo can be found in the folder `pyramidal_cell`.
-
-In the terminal, change into the directory (`cd pyramidal_cell`), open the `README.md` and follow its instructions.
-
-&nbsp;
+{0}
 
 ## New simulation
 
