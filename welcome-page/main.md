@@ -20,7 +20,7 @@ bdm new my-sim
 
 ## BioDynaMo notebooks list
 
-To open a list of all available notebooks, **[click here](https://8888-harlequin-bonobo-s9jyv8x5.ws-eu18.gitpod.io/?token=738632ffd4725a17eb0e025b0b65f06f33fd317f0703dbfcde93571d2cc95e5b)** or execute `open-notebook-window` in the terminal.
+To open a list of all available notebooks, **[click here]({1})** or execute `open-notebook-window` in the terminal.
 
 &nbsp;
 

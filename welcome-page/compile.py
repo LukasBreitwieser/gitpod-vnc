@@ -24,7 +24,8 @@ elif demo_env is not None:
     demo = read('{}/try-demo.md'.format(script_dir))
     action_instructions = demo.format(demo_env)
 
-main = main.format(action_instructions)
+url = check_output(["notebook-url"]).decode('utf8')
+main = main.format(action_instructions, url)
 
 with open(welcome_page_path, 'w') as file:
     file.write(main)
