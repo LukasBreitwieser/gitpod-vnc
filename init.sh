@@ -29,7 +29,7 @@ fi
 
 # Create and open the welcome page
 $BDM_SCRIPT_DIR/welcome-page/compile.py
-gp open /workspace/BioDynaMo-welcome.md
+# gp open /workspace/BioDynaMo-welcome.md
 
 bash -c "sleep 3 ; gp open /workspace/BioDynaMo-welcome.md" &
 # reset
