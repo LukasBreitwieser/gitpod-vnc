@@ -1,4 +1,4 @@
-## You selected to run the `{0}` demo
+## You selected the `{0}` demo
 
 The demo can be found in the folder `{0}`.
 

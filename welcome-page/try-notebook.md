@@ -1,7 +1,9 @@
-## You selected to run the `{0}` notebook  
+## You selected the `{0}` notebook  
 
-**[Click here]({1})** if the browser blocked the opening of the new window.
+A new window should have opened showing the selected notebook.
+If that did not happen, the browser blocked it.
+**[Click here]({1})** to try to open it again.
 
-To adjust the browser settings for the best experience **[follow this guide](https://www.gitpod.io/docs/configure/browser-settings)**.
+If that did not work as well adjust the browser settings following this guide:  **[https://www.gitpod.io/docs/configure/browser-settings](https://www.gitpod.io/docs/configure/browser-settings)**.
 
 &nbsp;
