@@ -43,7 +43,7 @@ COPY paraview.sh /home/gitpod/biodynamo/build/bin/sh_functions/paraview
 RUN echo "c.NotebookApp.allow_origin = '*'" >> ~/biodynamo/build/third_party/root/etc/notebook/jupyter_notebook_config.py
 
 # Source BioDynaMo by default
-RUN echo 'source $HOME/biodynamo/build/bin/thisbdm.sh' >> $HOME/.bashrc
+RUN echo 'source $HOME/biodynamo/build/bin/thisbdm.sh &>/dev/null' >> $HOME/.bashrc
 
 # Set default branch name
 RUN git config --global init.defaultBranch master
