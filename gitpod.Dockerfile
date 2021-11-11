@@ -49,4 +49,4 @@ RUN echo 'source $HOME/biodynamo/build/bin/thisbdm.sh &>/dev/null' >> $HOME/.bas
 RUN git config --global init.defaultBranch master
 
 # unset git credential helper
-git config --global --unset credential.helper
+RUN git config --global --unset credential.helper
