@@ -18,6 +18,9 @@ cat << EOF > /workspace/.vscode/settings.json
 }
 EOF
 
+# unset git credential helper
+git config --global --unset credential.helper
+
 # wait until jupyter is ready
 gp await-port 8888 &>/dev/null
 
