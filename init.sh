@@ -21,6 +21,7 @@ gp await-port 8888 &>/dev/null
 if [ ! -z $BDM_TRY_NOTEBOOK ]; then
   # This might be blocked by the browser's pop-up blocker
   # open-notebook-window $BDM_TRY_NOTEBOOK
+  echo ""
 elif [ ! -z $BDM_TRY_DEMO ]; then
   # Demo
   bdm demo $BDM_TRY_DEMO
