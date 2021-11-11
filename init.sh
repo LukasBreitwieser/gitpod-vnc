@@ -8,6 +8,16 @@ echo -e '\0033\0143'
 echo "Welcome to BioDynaMo on gitpod!"
 echo ""
 
+# create setting to open markdown files in preview mode.
+mkdir -p /workspace/.vscode
+cat << EOF > /workspace/.vscode/settings.json
+{
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+}
+EOF
+
 # wait until jupyter is ready
 gp await-port 8888 &>/dev/null
 
