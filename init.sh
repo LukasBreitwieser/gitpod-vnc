@@ -31,5 +31,6 @@ fi
 $BDM_SCRIPT_DIR/welcome-page/compile.py
 gp open /workspace/BioDynaMo-welcome.md
 
+bash -c "sleep 3 ; gp open /workspace/BioDynaMo-welcome.md" &
 # reset
 echo -e '\0033\0143'
