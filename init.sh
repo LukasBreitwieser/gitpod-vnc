@@ -20,8 +20,7 @@ gp await-port 8888 &>/dev/null
 
 if [ ! -z $BDM_TRY_NOTEBOOK ]; then
   # This might be blocked by the browser's pop-up blocker
-  # open-notebook-window $BDM_TRY_NOTEBOOK
-  echo ""
+  bash -c "sleep 3 ; open-notebook-window $BDM_TRY_DEMO" &
 elif [ ! -z $BDM_TRY_DEMO ]; then
   # Demo
   bdm demo $BDM_TRY_DEMO
@@ -29,8 +28,7 @@ fi
 
 # Create and open the welcome page
 $BDM_SCRIPT_DIR/welcome-page/compile.py
-# gp open /workspace/BioDynaMo-welcome.md
+bash -c "sleep 3 ; gp open /workspace/BioDynaMo-welcome.md" &
 
-bash -c "sleep 3 ; echo 'opening now' && gp open /workspace/BioDynaMo-welcome.md && echo 'opened'" &
 # reset
 echo -e '\0033\0143'
