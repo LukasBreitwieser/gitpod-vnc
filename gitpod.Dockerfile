@@ -29,7 +29,7 @@ RUN PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.9.1 \
 # errors caused by docker security constraints
 RUN git clone https://github.com/BioDynaMo/biodynamo.git     \
     && cd biodynamo                                          \
-    && git checkout 4fff9964abbd2543c314e3a11dae878d6159414f \
+    && git checkout 96328f4295a94ff35c5dad251461a97c3384134a \
     && export SILENT_INSTALL=1                               \
     && ./prerequisites.sh all                                \
     && mkdir build                                           \
