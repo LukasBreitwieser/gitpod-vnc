@@ -35,7 +35,7 @@ RUN git clone https://github.com/BioDynaMo/biodynamo.git     \
     && mkdir build                                           \
     && cd build                                              \
     && cmake -Dnotebooks=on -Dnuma=off ..                    \
-    && make -j16
+    && make -j8
 
 # Patch paraview shell function to open VNC window before
 COPY paraview.sh /home/gitpod/biodynamo/build/bin/sh_functions/paraview
