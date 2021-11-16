@@ -15,6 +15,7 @@ ports:
 
 tasks:
   - name: Initialization
+    init: echo init &>/dev/null
     command: /workspace/gitpod-vnc/jupyter.sh
   - name: Terminal
     command: /workspace/gitpod-vnc/init.sh
