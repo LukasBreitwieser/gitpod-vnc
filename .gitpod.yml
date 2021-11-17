@@ -1,5 +1,4 @@
-image:
-  file: gitpod.Dockerfile
+image: biodynamo/gitpod:latest
 
 ports:
   # jupyter notebooks
