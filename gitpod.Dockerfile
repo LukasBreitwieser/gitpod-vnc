@@ -27,11 +27,19 @@ RUN PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.9.1 \
 
 # Turn off NUMA, to avoid "mbind: Operation not permitted", 
 # errors caused by docker security constraints
-RUN git clone https://github.com/BioDynaMo/biodynamo.git     \
-    && cd biodynamo                                          \
-    && git checkout v1.04                                    \
-    && export SILENT_INSTALL=1                               \
-    && ./prerequisites.sh all                                \
+RUN set -x && git clone https://github.com/BioDynaMo/biodynamo.git \
+    && cd biodynamo                                                \
+    && git checkout v1.04                                    
+
+# Patch prerequisites script to skip pyenv update.
+# pyenv update fails due to some reason.
+RUN sed -i "s|pyenv update|#pyenv update|g" biodynamo/util/installation/ubuntu-18.04/prerequisites.sh
+
+RUN cd biodynamo               \
+    && export SILENT_INSTALL=1 \
+    && ./prerequisites.sh all                                
+
+RUN cd biodynamo \
     && mkdir build                                           \
     && cd build                                              \
     && cmake -Dnotebooks=on -Dnuma=off ..                    \
